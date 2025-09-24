@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cinematic Design System - Netflix/Disney+ Inspired */
+
+@layer base {
+  :root {
+    /* Core Colors - Rich, cinematic palette */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+    
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --card-hover: 0 0% 12%;
+    
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Primary - Netflix Red */
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 84% 65%;
+    
+    /* Secondary - Deep Blue */
+    --secondary: 214 100% 20%;
+    --secondary-foreground: 0 0% 95%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: 346 77% 49%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 84% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 10%), hsl(0 0% 5%));
+    --gradient-hero: linear-gradient(90deg, hsl(0 0% 0% / 0.95) 0%, hsl(0 0% 0% / 0) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.8);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-xl: 0 20px 60px -15px hsl(0 0% 0% / 0.9);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Typography */
+    --font-display: "Inter", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+  }
+  
+  .light {
+    /* Softer light mode with better contrast */
+    --background: 0 0% 94%;
+    --foreground: 0 0% 15%;
+    
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 15%;
+    --card-hover: 0 0% 92%;
+    
+    --popover: 0 0% 96%;
+    --popover-foreground: 0 0% 15%;
+    
+    /* Darker primary for better contrast */
+    --primary: 0 75% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 75% 55%;
+    
+    --secondary: 214 80% 40%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 35%;
+    
+    --accent: 346 65% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 82%;
+    --input: 0 0% 88%;
+    --ring: 0 75% 50%;
+    
+    /* Softer gradients for light mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.3));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 98%), hsl(0 0% 94%));
+    --gradient-hero: linear-gradient(90deg, hsl(0 0% 94% / 0.95) 0%, hsl(0 0% 94% / 0) 100%);
+    
+    /* Subtle shadows for light mode */
+    --shadow-card: 0 2px 8px hsl(0 0% 0% / 0.08);
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.1);
+    --shadow-xl: 0 10px 30px -10px hsl(0 0% 0% / 0.15);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
